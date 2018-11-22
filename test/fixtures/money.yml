@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_money: 1
+  sale: 1
+
+two:
+  user_money: 1
+  sale: 1

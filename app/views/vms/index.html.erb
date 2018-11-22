@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/assets/index.js"></script>
+  </head>
+  <body>
+    <div class="drink">
+      <% @drinks.each do |drink| %>
+        <div class="drinkList">
+          <%= drink.name %>
+          <span class="price" name="price"><%= drink.price %></span>
+          <span class="stock" name="stock"><%= drink.stock %></span>
+          <%= drink.maker %>
+          <%= drink.date %>
+          <%= drink.kind %>
+          <span class="buyButton" name="<%= drink.id %>"><button type="button" disabled>buy</button></span>
+        </div>
+      <% end %>
+    </div>
+    <button type="button" name="addDrink">ADD DRINK</button>
+    <div class="">
+      current money = <span class="totalMoney"><%= @total %></span>
+      sale = <span class="sale"><%= @sale %></span>
+      <button type="button" name="getChange">GET CHANGE</button>
+    </div>
+    <div class="">
+      <label for="inputMoney">put money in</label>
+      <input type="number" name="inputMoney" min=10 max=1000 step=10>
+      <button type="button" name="inputMoneyButton">PUT</button>
+      <span class="alertMessage"></span>
+    </div>
+  </body>
+</html>
